@@ -1,0 +1,606 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --roxo-principal: #641A91;
+    --roxo-escuro: #290B43;
+    --roxo-claro: #EDE1F3;
+
+    --branco: #FFFFFF;
+    --fundo: #FCF9FD;
+    --preto: #21182A;
+
+    --texto-secundario: #786D80;
+
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Poppins', sans-serif;
+}
+
+/* Configura a página inteira */
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: var(--fonte-texto);
+
+    background-color: var(--fundo);
+
+    color: var(--preto);
+}
+
+/* Remove a aparência padrão dos links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Padroniza os campos e botões */
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   ESTRUTURA PRINCIPAL
+   ========================================= */
+
+.pagina-login {
+    display: flex;
+
+    /* Ocupa toda a altura da tela */
+    min-height: 100vh;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   MENU LATERAL ROXO
+   ========================================= */
+
+/* ORGANIZAÇÃO DA LATERAL ROXA */
+
+.painel-lateral {
+    width: 35%;
+    min-height: 100vh;
+
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    /* Reduzimos o espaçamento lateral */
+    padding: 35px 25px 25px;
+}
+
+/* LOGO */
+
+/* LOGO CENTRALIZADA NA LATERAL */
+
+.marca {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca img {
+    width: 300px;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+}
+
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    max-width: 350px;
+
+    margin-top: 65px;
+}
+
+.texto-superior {
+    font-size: 23px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #D9BCEB;
+}
+
+.apresentacao h1 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 30px;
+    line-height: 1.4;
+
+    margin: 18px 0 12px;
+}
+
+.apresentacao p {
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #E0D3E9;
+}
+
+
+/* MASCOTE */
+
+.mascote {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: auto;
+    margin-bottom: 35px;
+}
+
+.mascote img {
+    width: 100px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.mascote p {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ LATERAL */
+
+.rodape-lateral {
+    font-size: 9px;
+
+    color: #C6B3D2;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+/* =========================================
+   ÁREA DIREITA
+   ========================================= */
+
+.area-formulario {
+
+    /* Ocupa o espaço restante da tela */
+    flex: 1;
+
+    min-height: 100vh;
+
+    background-color: var(--fundo);
+
+    padding: 30px 65px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho-login {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 11px;
+
+    color: var(--texto-secundario);
+}
+
+.cabecalho-login a {
+    transition: color 0.3s;
+}
+
+.cabecalho-login a:hover {
+    color: var(--roxo-principal);
+}
+
+
+/* =========================================
+   CONTEÚDO DO LOGIN
+   ========================================= */
+
+.conteudo-login {
+
+    /* Limita a largura para manter o formulário organizado */
+    width: 100%;
+    max-width: 440px;
+
+    /* Centraliza horizontalmente */
+    margin: auto;
+
+}
+
+
+/* TÍTULO DO LOGIN */
+
+.titulo-login span {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--roxo-principal);
+}
+
+.titulo-login h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    color: var(--roxo-escuro);
+
+    margin-top: 12px;
+}
+
+.titulo-login p {
+
+    font-size: 12px;
+
+    color: var(--texto-secundario);
+
+    margin-top: 8px;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+
+.form-login {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* ORGANIZAÇÃO DE CADA CAMPO */
+
+.grupo-campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.grupo-campo label {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: var(--preto);
+}
+
+
+/* APARÊNCIA DOS INPUTS */
+
+.grupo-campo input {
+
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 14px;
+
+    border: 1px solid #E4D9EA;
+
+    border-radius: 9px;
+
+    background-color: var(--branco);
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* TEXTO DE EXEMPLO DENTRO DOS CAMPOS */
+
+.grupo-campo input::placeholder {
+    color: #A99BAF;
+}
+
+
+/* EFEITO AO CLICAR NO CAMPO */
+
+.grupo-campo input:focus {
+
+    border-color: var(--roxo-principal);
+
+    box-shadow: 0 0 0 3px rgba(100, 26, 145, 0.08);
+}
+
+
+/* =========================================
+   OPÇÕES DE LOGIN
+   ========================================= */
+
+.opcoes-login {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+
+    color: var(--texto-secundario);
+}
+
+.lembrar-senha {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.lembrar-senha input {
+    accent-color: var(--roxo-principal);
+}
+
+.opcoes-login a {
+    color: var(--roxo-principal);
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTÃO ENTRAR
+   ========================================= */
+
+.botao-entrar {
+
+    width: 100%;
+
+    height: 43px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: var(--roxo-principal);
+
+    color: var(--branco);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-entrar:hover {
+
+    background-color: var(--roxo-escuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   OUTRAS FORMAS DE ENTRAR
+   ========================================= */
+
+.outras-opcoes {
+
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.outras-opcoes p {
+
+    font-size: 10px;
+
+    color: var(--texto-secundario);
+
+    margin-bottom: 15px;
+}
+
+.botoes-sociais {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+.botoes-sociais button {
+
+    flex: 1;
+
+    height: 38px;
+
+    border: 1px solid #E6DCEB;
+
+    border-radius: 22px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.botoes-sociais button:hover {
+
+    border-color: var(--roxo-principal);
+
+    background-color: #F7F0FA;
+}
+
+
+/* =========================================
+   LINK PARA CADASTRO
+   ========================================= */
+
+.link-cadastro {
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 11px;
+
+    color: var(--texto-secundario);
+}
+
+.link-cadastro a {
+
+    color: var(--roxo-principal);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RODAPÉ DO LOGIN
+   ========================================= */
+
+.rodape-login {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    font-size: 10px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+/* TABLETS E TELAS MENORES */
+
+@media (max-width: 900px) {
+
+    .painel-lateral {
+        width: 32%;
+
+        padding: 25px;
+    }
+
+    .area-formulario {
+        padding: 25px 35px;
+    }
+
+    .apresentacao h1 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+
+    /* Empilha as duas áreas verticalmente */
+    .pagina-login {
+        flex-direction: column;
+    }
+
+    /* Reduz o menu lateral */
+    .painel-lateral {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 22px;
+
+        gap: 25px;
+    }
+
+    .marca img {
+        width: 70px;
+    }
+
+    .apresentacao {
+        max-width: 100%;
+    }
+
+    .apresentacao h1 {
+        font-size: 25px;
+
+        margin: 12px 0;
+    }
+
+    /* Esconde o mascote para economizar espaço */
+    .mascote {
+        display: none;
+    }
+
+    .rodape-lateral {
+        display: none;
+    }
+
+    /* Área do formulário */
+    .area-formulario {
+        width: 100%;
+
+        min-height: 650px;
+
+        padding: 25px 20px;
+    }
+
+    .conteudo-login {
+        max-width: 440px;
+    }
+
+    .titulo-login h2 {
+        font-size: 21px;
+    }
+
+    .rodape-login {
+        margin-top: 35px;
+    }
+
+}

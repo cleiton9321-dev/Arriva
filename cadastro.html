@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Adapta a página para diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Arriva | Criar conta</title>
+
+    <!-- Arquivo de estilização exclusivo do cadastro -->
+    <link rel="stylesheet" href="css/cadastro.css" />
+
+    <!-- Fontes utilizadas na identidade visual do Arriva -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="pagina-cadastro">
+      <!-- =====================================
+             LATERAL ROXA - IDENTIDADE ARRIVA
+        ====================================== -->
+
+      <aside class="painel-lateral">
+        <!-- Logo centralizada -->
+        <div class="marca">
+          <img src="assets/logo/logo-arriva.png" alt="Logo Arriva" />
+        </div>
+
+        <!-- Apresentação da marca -->
+        <section class="apresentacao">
+          <span class="texto-superior"> RÁPIDO. FÁCIL. ARRIVA. </span>
+
+          <h1>Seu próximo favorito começa aqui.</h1>
+
+          <p>
+            Crie sua conta e deixe o Arriva cuidar da parte mais gostosa do seu
+            dia.
+          </p>
+        </section>
+
+        <!-- Mascote e slogan -->
+        <div class="mascote">
+          <img
+            src="assets/imagens/mascote.png"
+            alt="Mascote camaleão do Arriva"
+          />
+
+          <p>
+            Peça, relaxe,
+            <strong>a gente entrega!</strong>
+          </p>
+        </div>
+
+        <!-- Rodapé lateral -->
+        <footer class="rodape-lateral">
+                © 2026 Arriva. Todos os direitos reservados
+        </footer>
+      </aside>
+
+      <!-- =====================================
+             ÁREA DO FORMULÁRIO
+        ====================================== -->
+
+      <section class="area-formulario">
+        <!-- Cabeçalho superior -->
+        <header class="cabecalho-cadastro">
+          <a href="login.html">← Voltar ao início</a>
+
+          <a href="#">Precisa de ajuda?</a>
+        </header>
+
+        <!-- CONTEÚDO CENTRAL -->
+        <div class="conteudo-cadastro">
+          <!-- Título da página -->
+          <div class="titulo-cadastro">
+            <span>FAÇA PARTE DO ARRIVA</span>
+
+            <h2>Seu próximo favorito espera.</h2>
+
+            <p>Crie sua conta. É rápido, fácil e do seu jeito.</p>
+          </div>
+
+          <!-- =================================
+                     BARRA DE PROGRESSO
+                ================================== -->
+
+          <div class="progresso-container">
+            <div class="progresso-informacoes">
+              <span>Progresso do cadastro</span>
+
+              <span>Etapa <span class="numero-etapa">1</span> de 6</span>
+            </div>
+
+            <!-- A linha será preenchida com gradiente -->
+            <div class="barra-progresso">
+              <div class="progresso-preenchido"></div>
+            </div>
+          </div>
+
+          <!-- =================================
+                     FORMULÁRIO COMPLETO
+                ================================== -->
+
+          <form class="form-cadastro">
+            <!-- ETAPA 1: DADOS PESSOAIS -->
+
+            <section class="etapa" id="etapa-1">
+              <div class="cabecalho-etapa">
+                <span>01 / DADOS PESSOAIS</span>
+
+                <h3>Vamos nos conhecer?</h3>
+
+                <p>Comece preenchendo suas informações básicas.</p>
+              </div>
+
+              <!-- Nome completo -->
+              <div class="grupo-campo">
+                <label for="nome">Nome completo</label>
+
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Como podemos chamar você?"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <!-- Data de nascimento -->
+              <div class="grupo-campo">
+                <label for="nascimento">Data de nascimento</label>
+
+                <input
+                  type="date"
+                  id="nascimento"
+                  name="nascimento"
+                  autocomplete="bday"
+                  required
+                />
+              </div>
+
+              <a href="#etapa-2" class="botao-principal"> Continuar </a>
+            </section>
+
+            <!-- ETAPA 2: ENDEREÇO -->
+
+            <section class="etapa" id="etapa-2">
+              <div class="cabecalho-etapa">
+                <span>02 / ENDEREÇO</span>
+
+                <h3>Onde podemos encontrar você?</h3>
+
+                <p>Precisamos do seu endereço para as entregas.</p>
+              </div>
+
+              <!-- CEP -->
+              <div class="grupo-campo">
+                <label for="cep">CEP</label>
+
+                <input
+                  type="text"
+                  id="cep"
+                  name="cep"
+                  placeholder="00000-000"
+                  autocomplete="postal-code"
+                  required
+                />
+              </div>
+
+              <!-- Rua e número -->
+              <div class="linha-campos">
+                <div class="grupo-campo">
+                  <label for="rua">Rua / Avenida</label>
+
+                  <input
+                    type="text"
+                    id="rua"
+                    name="rua"
+                    placeholder="Nome da rua"
+                    autocomplete="address-line1"
+                    required
+                  />
+                </div>
+
+                <div class="grupo-campo campo-numero">
+                  <label for="numero">Número</label>
+
+                  <input
+                    type="text"
+                    id="numero"
+                    name="numero"
+                    placeholder="Nº"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Complemento -->
+              <div class="grupo-campo">
+                <label for="complemento"> Complemento (opcional) </label>
+
+                <input
+                  type="text"
+                  id="complemento"
+                  name="complemento"
+                  placeholder="Apartamento, bloco, referência..."
+                />
+              </div>
+
+              <!-- Bairro -->
+              <div class="grupo-campo">
+                <label for="bairro">Bairro</label>
+
+                <input
+                  type="text"
+                  id="bairro"
+                  name="bairro"
+                  placeholder="Seu bairro"
+                  required
+                />
+              </div>
+
+              <!-- Cidade e estado -->
+              <div class="linha-campos">
+                <div class="grupo-campo">
+                  <label for="cidade">Cidade</label>
+
+                  <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    placeholder="Sua cidade"
+                    autocomplete="address-level2"
+                    required
+                  />
+                </div>
+
+                <div class="grupo-campo campo-estado">
+                  <label for="estado">Estado</label>
+
+                  <input
+                    type="text"
+                    id="estado"
+                    name="estado"
+                    placeholder="UF"
+                    maxlength="2"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="botoes-etapa">
+                <a href="#etapa-1" class="botao-voltar"> Voltar </a>
+
+                <a href="#etapa-3" class="botao-principal"> Continuar </a>
+              </div>
+            </section>
+
+            <!-- ETAPA 3: CONTATO -->
+
+            <section class="etapa" id="etapa-3">
+              <div class="cabecalho-etapa">
+                <span>03 / CONTATO</span>
+
+                <h3>Como podemos falar com você?</h3>
+
+                <p>Informe seus dados de contato.</p>
+              </div>
+
+              <!-- E-mail -->
+              <div class="grupo-campo">
+                <label for="email">E-mail</label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+
+              <!-- Telefone -->
+              <div class="grupo-campo">
+                <label for="telefone">Telefone / WhatsApp</label>
+
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(11) 99999-9999"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+
+              <div class="botoes-etapa">
+                <a href="#etapa-2" class="botao-voltar"> Voltar </a>
+
+                <a href="#etapa-4" class="botao-principal"> Continuar </a>
+              </div>
+            </section>
+
+            <!-- ETAPA 4: ACESSIBILIDADE -->
+
+            <section class="etapa etapa-acessibilidade" id="etapa-4">
+              <div class="cabecalho-etapa">
+                <span>04 / ACESSIBILIDADE</span>
+
+                <h3>Queremos que o Arriva seja acessível!</h3>
+
+                <p>
+                  Você possui algum tipo de daltonismo? Essa informação nos
+                  ajuda a adaptar as cores e os elementos da plataforma.
+                </p>
+              </div>
+
+              <!-- Pergunta sobre daltonismo -->
+              <div class="grupo-campo">
+                <label>Você é daltônico(a)?</label>
+
+                <div class="opcoes-radio">
+                  <label class="opcao-radio">
+                    <input
+                      type="radio"
+                      name="daltonismo"
+                      id="daltonismo-sim"
+                      value="sim"
+                      required
+                    />
+
+                    Sim
+                  </label>
+
+                  <label class="opcao-radio">
+                    <input
+                      type="radio"
+                      name="daltonismo"
+                      id="daltonismo-nao"
+                      value="nao"
+                    />
+
+                    Não
+                  </label>
+                </div>
+              </div>
+
+              <!-- APARECE QUANDO A PESSOA SELECIONA SIM -->
+              <div class="tipo-daltonismo">
+                <div class="grupo-campo">
+                  <label for="tipo-daltonismo">
+                    Qual tipo de daltonismo?
+                  </label>
+
+                  <select id="tipo-daltonismo" name="tipo_daltonismo">
+                    <option value="">Selecione uma opção</option>
+
+                    <option value="protanopia">Protanopia</option>
+
+                    <option value="deuteranopia">Deuteranopia</option>
+
+                    <option value="tritanopia">Tritanopia</option>
+                  </select>
+                </div>
+
+                <p class="aviso-acessibilidade">
+                  Não sabe qual é o seu tipo? Tudo bem! Você pode selecionar
+                  essa opção.
+                </p>
+              </div>
+
+              <div class="botoes-etapa">
+                <a href="#etapa-3" class="botao-voltar"> Voltar </a>
+
+                <a href="#etapa-5" class="botao-principal"> Continuar </a>
+              </div>
+            </section>
+
+            <!-- ETAPA 5: SEGURANÇA -->
+
+            <section class="etapa" id="etapa-5">
+              <div class="cabecalho-etapa">
+                <span>05 / SEGURANÇA</span>
+
+                <h3>Crie sua senha.</h3>
+
+                <p>
+                  Escolha uma senha segura para acessar sua conta sempre que
+                  quiser.
+                </p>
+              </div>
+
+              <!-- Senha -->
+              <div class="grupo-campo">
+                <label for="senha">Senha</label>
+
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  placeholder="Crie uma senha segura"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+
+                <small> Utilize pelo menos 8 caracteres. </small>
+              </div>
+
+              <!-- Confirmar senha -->
+              <div class="grupo-campo">
+                <label for="confirmar-senha"> Confirmar senha </label>
+
+                <input
+                  type="password"
+                  id="confirmar-senha"
+                  name="confirmar_senha"
+                  placeholder="Digite sua senha novamente"
+                  autocomplete="new-password"
+                  required
+                />
+              </div>
+
+              <div class="botoes-etapa">
+                <a href="#etapa-4" class="botao-voltar"> Voltar </a>
+
+                <a href="#etapa-6" class="botao-principal"> Continuar </a>
+              </div>
+            </section>
+
+            <!-- ETAPA 6: FINALIZAÇÃO -->
+
+            <section class="etapa" id="etapa-6">
+              <div class="cabecalho-etapa">
+                <span>06 / FINALIZAÇÃO</span>
+
+                <h3>Estamos quase lá!</h3>
+
+                <p>
+                  Revise suas informações e finalize seu cadastro no Arriva.
+                </p>
+              </div>
+
+              <div class="resumo-cadastro">
+                <p>
+                  Confira se todas as informações preenchidas estão corretas.
+                </p>
+
+                <p>
+                  Ao continuar, você confirma que deseja criar sua conta Arriva.
+                </p>
+              </div>
+
+              <div class="botoes-etapa">
+                <a href="#etapa-5" class="botao-voltar"> Voltar </a>
+
+                <button type="submit" class="botao-principal">
+                  Criar minha conta
+                </button>
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <!-- RODAPÉ DA ÁREA DIREITA -->
+        <footer class="rodape-cadastro">
+          <a href="#">Privacidade</a>
+
+          <a href="#">Termos de uso</a>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

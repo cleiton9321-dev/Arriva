@@ -1,0 +1,897 @@
+
+/* =========================================
+   ARRIVA - CADASTRO
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+/* Remove as configurações padrões do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis da identidade visual */
+:root {
+
+    --roxo-principal: #641A91;
+    --roxo-escuro: #290B43;
+    --roxo-claro: #EDE1F3;
+
+    --branco: #FFFFFF;
+    --fundo: #FCF9FD;
+
+    --preto: #21182A;
+    --texto-secundario: #786D80;
+
+    --borda: #E4D9EA;
+
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Poppins', sans-serif;
+}
+
+/* Configura a página */
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: var(--fonte-texto);
+
+    background-color: var(--fundo);
+    color: var(--preto);
+}
+
+/* Padronização de links e botões */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   ESTRUTURA PRINCIPAL
+========================================= */
+
+.pagina-cadastro {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   LATERAL ROXA
+========================================= */
+
+.painel-lateral {
+
+    width: 35%;
+    min-height: 100vh;
+
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    padding: 35px 30px 25px;
+}
+
+
+/* LOGO */
+
+.marca {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca img {
+    width: 300px;
+    height: auto;
+
+    display: block;
+    object-fit: contain;
+}
+
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    max-width: 350px;
+
+    margin-top: 65px;
+}
+
+.texto-superior {
+    font-size: 23px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #D9BCEB;
+}
+
+.apresentacao h1 {
+    font-family: var(--fonte-titulo);
+
+    font-size: 30px;
+    line-height: 1.4;
+
+    margin: 18px 0 12px;
+}
+
+.apresentacao p {
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #E0D3E9;
+}
+
+
+/* MASCOTE */
+
+.mascote {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: auto;
+    margin-bottom: 35px;
+}
+
+.mascote img {
+    width: 100px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.mascote p {
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* RODAPÉ LATERAL */
+
+.rodape-lateral {
+    font-size: 9px;
+
+    color: #C6B3D2;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+/* =========================================
+   ÁREA DO FORMULÁRIO
+========================================= */
+
+.area-formulario {
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 100vh;
+
+    background-color: var(--fundo);
+
+    padding: 25px 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho-cadastro {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 10px;
+
+    color: var(--texto-secundario);
+}
+
+.cabecalho-cadastro a:hover {
+    color: var(--roxo-principal);
+}
+
+
+/* CONTEÚDO CENTRAL */
+
+.conteudo-cadastro {
+
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 30px 0;
+}
+
+
+/* TÍTULO */
+
+.titulo-cadastro span {
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--roxo-principal);
+}
+
+.titulo-cadastro h2 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 23px;
+    font-weight: 700;
+
+    color: var(--roxo-escuro);
+
+    margin-top: 8px;
+}
+
+.titulo-cadastro p {
+
+    font-size: 11px;
+
+    color: var(--texto-secundario);
+
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BARRA DE PROGRESSO
+========================================= */
+
+.progresso-container {
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+
+
+/* Informações acima da linha */
+
+.progresso-informacoes {
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    color: var(--texto-secundario);
+
+    margin-bottom: 9px;
+}
+
+
+/* Linha de fundo */
+
+.barra-progresso {
+
+    width: 100%;
+    height: 7px;
+
+    background-color: #EAE2ED;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+/* Parte colorida que aumenta */
+
+.progresso-preenchido {
+
+    width: 16.66%;
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #C9A5E8,
+        #A9BDEB,
+        #A9DCCB,
+        #F0D9A5,
+        #E8B3CC,
+        #C9A5E8
+    );
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================
+   ATUALIZAÇÃO AUTOMÁTICA POR ETAPA
+========================================= */
+
+/* Etapa 1 */
+body:has(#etapa-1:target)
+.progresso-preenchido {
+    width: 16.66%;
+}
+
+/* Etapa 2 */
+body:has(#etapa-2:target)
+.progresso-preenchido {
+    width: 33.33%;
+}
+
+/* Etapa 3 */
+body:has(#etapa-3:target)
+.progresso-preenchido {
+    width: 50%;
+}
+
+/* Etapa 4 */
+body:has(#etapa-4:target)
+.progresso-preenchido {
+    width: 66.66%;
+}
+
+/* Etapa 5 */
+body:has(#etapa-5:target)
+.progresso-preenchido {
+    width: 83.33%;
+}
+
+/* Etapa 6 */
+body:has(#etapa-6:target)
+.progresso-preenchido {
+    width: 100%;
+}
+
+
+/* Atualização do número da etapa */
+
+.numero-etapa {
+    font-size: 0;
+}
+
+.numero-etapa::after {
+    content: "1";
+    font-size: 10px;
+}
+
+body:has(#etapa-2:target) .numero-etapa::after {
+    content: "2";
+}
+
+body:has(#etapa-3:target) .numero-etapa::after {
+    content: "3";
+}
+
+body:has(#etapa-4:target) .numero-etapa::after {
+    content: "4";
+}
+
+body:has(#etapa-5:target) .numero-etapa::after {
+    content: "5";
+}
+
+body:has(#etapa-6:target) .numero-etapa::after {
+    content: "6";
+}
+
+/* =========================================
+   ETAPAS DO CADASTRO
+========================================= */
+
+/* Esconde as etapas inicialmente */
+.etapa {
+    display: none;
+    animation: aparecer 0.35s ease;
+}
+
+/* Mostra a primeira etapa ao abrir a página */
+.etapa:first-of-type {
+    display: block;
+}
+
+/* Quando outra etapa é selecionada,
+   esconde a primeira etapa */
+.form-cadastro:has(.etapa:target)
+.etapa:first-of-type:not(:target) {
+    display: none;
+}
+
+/* Mostra a etapa selecionada */
+.etapa:target {
+    display: block;
+}
+
+
+/* Animação suave */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* TÍTULO DE CADA ETAPA */
+
+.cabecalho-etapa {
+    margin-bottom: 22px;
+}
+
+.cabecalho-etapa span {
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: var(--roxo-principal);
+}
+
+.cabecalho-etapa h3 {
+
+    font-family: var(--fonte-titulo);
+
+    font-size: 19px;
+
+    color: var(--roxo-escuro);
+
+    margin-top: 9px;
+}
+
+.cabecalho-etapa p {
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: var(--texto-secundario);
+
+    margin-top: 7px;
+}
+
+/* =========================================
+   CAMPOS DO FORMULÁRIO
+========================================= */
+
+.grupo-campo {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 16px;
+}
+
+
+/* Nomes dos campos */
+
+.grupo-campo label {
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: var(--preto);
+}
+
+
+/* Campos de preenchimento */
+
+.grupo-campo input,
+.grupo-campo select {
+
+    width: 100%;
+    height: 42px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 9px;
+
+    background-color: var(--branco);
+
+    color: var(--preto);
+
+    font-size: 11px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Texto de exemplo */
+
+.grupo-campo input::placeholder {
+    color: #AA9EAF;
+}
+
+
+/* Efeito ao selecionar um campo */
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+
+    border-color: var(--roxo-principal);
+
+    box-shadow: 0 0 0 3px rgba(100, 26, 145, 0.08);
+}
+
+
+/* Textos auxiliares */
+
+.grupo-campo small {
+
+    font-size: 9px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* CAMPOS NA MESMA LINHA */
+
+.linha-campos {
+
+    display: flex;
+    gap: 12px;
+}
+
+.linha-campos .grupo-campo {
+    flex: 1;
+    min-width: 0;
+}
+
+.linha-campos .campo-numero {
+    flex: 0 0 105px;
+}
+
+.linha-campos .campo-estado {
+    flex: 0 0 85px;
+}
+
+/* =========================================
+   ACESSIBILIDADE
+========================================= */
+
+/* Organização das opções Sim e Não */
+
+.opcoes-radio {
+
+    display: flex;
+    gap: 20px;
+
+    margin-top: 5px;
+}
+
+.opcao-radio {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    color: var(--preto);
+
+    cursor: pointer;
+}
+
+.opcao-radio input {
+
+    accent-color: var(--roxo-principal);
+
+    width: 15px;
+    height: 15px;
+}
+
+
+/* Esconde a seleção do tipo inicialmente */
+
+.tipo-daltonismo {
+    display: none;
+
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background-color: #F8F2FB;
+}
+
+
+/* Mostra a seleção quando Sim estiver marcado */
+
+.etapa-acessibilidade:has(#daltonismo-sim:checked)
+.tipo-daltonismo {
+
+    display: block;
+
+    animation: aparecer 0.3s ease;
+}
+
+
+/* Texto explicativo */
+
+.aviso-acessibilidade {
+
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: var(--texto-secundario);
+}
+
+/* =========================================
+   BOTÕES DAS ETAPAS
+========================================= */
+
+.botoes-etapa {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: var(--roxo-principal);
+
+    color: var(--branco);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+
+    background-color: var(--roxo-escuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* BOTÃO VOLTAR */
+
+.botao-voltar {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100px;
+    min-height: 42px;
+
+    padding: 10px 18px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 25px;
+
+    background-color: var(--branco);
+
+    color: var(--roxo-principal);
+
+    font-size: 10px;
+
+    transition: 0.3s;
+}
+
+.botao-voltar:hover {
+
+    background-color: var(--roxo-claro);
+}
+
+
+/* Quando existem dois botões,
+   o botão principal ocupa o espaço restante */
+
+.botoes-etapa .botao-principal {
+    flex: 1;
+}
+
+/* =========================================
+   FINALIZAÇÃO
+========================================= */
+
+.resumo-cadastro {
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background-color: #F4EDF8;
+
+    margin-bottom: 20px;
+}
+
+.resumo-cadastro p {
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: var(--texto-secundario);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.rodape-cadastro {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding-top: 20px;
+
+    font-size: 9px;
+
+    color: var(--texto-secundario);
+}
+
+.rodape-cadastro a:hover {
+    color: var(--roxo-principal);
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    .painel-lateral {
+        width: 32%;
+        padding: 25px 20px;
+    }
+
+    .area-formulario {
+        padding: 25px 30px;
+    }
+
+    .apresentacao h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 650px) {
+
+    /* Coloca a lateral acima do formulário */
+    .pagina-cadastro {
+        flex-direction: column;
+    }
+
+    .painel-lateral {
+        width: 100%;
+        min-height: auto;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .marca img {
+        width: 85px;
+    }
+
+    .apresentacao {
+        margin-top: 20px;
+    }
+
+    .apresentacao h1 {
+        font-size: 25px;
+    }
+
+    /* Mantém o mascote, mas reduz seu tamanho */
+    .mascote {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .mascote img {
+        width: 70px;
+    }
+
+    .rodape-lateral {
+        margin-top: 10px;
+    }
+
+    /* Área do formulário */
+    .area-formulario {
+        width: 100%;
+        min-height: 650px;
+
+        padding: 25px 20px;
+    }
+
+    .conteudo-cadastro {
+        max-width: 100%;
+    }
+
+    .titulo-cadastro h2 {
+        font-size: 20px;
+    }
+
+    .linha-campos {
+        gap: 8px;
+    }
+
+}

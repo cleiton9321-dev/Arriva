@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Permite que a página se adapte a diferentes tamanhos de tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Arriva | Login</title>
+
+    <!-- Conecta o arquivo CSS responsável pela aparência da página -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Carregamento das fontes que utilizaremos no projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- CONTAINER PRINCIPAL: organiza toda a tela de login -->
+    <main class="pagina-login">
+
+        <!-- LADO ESQUERDO: apresentação da marca Arriva -->
+        <aside class="painel-lateral">
+
+            <!-- Logo da plataforma -->
+            <div class="marca">
+                <img src="assets/logo/logo-arriva.png" alt="Logo Arriva">
+            </div>
+
+            <!-- Texto de apresentação -->
+            <section class="apresentacao">
+
+                <span class="texto-superior">SABOR, ALEGRIA E PRATICIDADE</span>
+
+                <h1>
+                    Tudo o que você
+                    ama, em um
+                    só app.
+                </h1>
+
+                <p>
+                    Seus restaurantes favoritos, novas descobertas
+                    e muito mais. Tudo pertinho de você.
+                </p>
+
+            </section>
+
+            <!-- Área reservada para o mascote -->
+            <div class="mascote">
+
+                <img src="assets/imagens/mascote.png" alt="Mascote camaleão do Arriva">
+
+                <p>
+                    Peça, relaxe,
+                    <strong>a gente entrega!</strong>
+                </p>
+
+            </div>
+
+            <!-- Rodapé do menu lateral -->
+            <footer class="rodape-lateral">
+               
+                © 2026 Arriva. Todos os direitos reservados
+            </footer>
+
+        </aside>
+
+
+        <!-- LADO DIREITO: formulário de login -->
+        <section class="area-formulario">
+
+            <!-- Navegação superior -->
+            <header class="cabecalho-login">
+
+                <a href="carregamento.html">← Voltar ao início</a>
+
+                <a href="#">Precisa de ajuda?</a>
+
+            </header>
+
+
+            <!-- Conteúdo central do formulário -->
+            <div class="conteudo-login">
+
+                <div class="titulo-login">
+
+                    <span>SUA CONTA ARRIVA</span>
+
+                    <h2>Que bom ter você de volta!</h2>
+
+                    <p>
+                        Entre para pedir seus favoritos e descobrir
+                        novos sabores.
+                    </p>
+
+                </div>
+
+
+                <!-- FORMULÁRIO DE ENTRADA -->
+                <form class="form-login">
+
+                    <!-- Campo de e-mail -->
+                    <div class="grupo-campo">
+
+                        <label for="email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Campo de senha -->
+                    <div class="grupo-campo">
+
+                        <label for="senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Opções adicionais do login -->
+                    <div class="opcoes-login">
+
+                        <label class="lembrar-senha">
+                            <input type="checkbox" name="lembrar">
+                            Manter conectado
+                        </label>
+
+                        <a href="recuperacao.html">
+                            Esqueci minha senha
+                        </a>
+
+                    </div>
+
+
+                    <!-- Botão principal -->
+                    <button type="submit" class="botao-entrar">
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <!-- Alternativas de acesso -->
+                <div class="outras-opcoes">
+
+                    <p>Ou entre com outra conta</p>
+
+                    <div class="botoes-sociais">
+
+                        <button type="button">
+                            Continuar com Google
+                        </button>
+
+                        <button type="button">
+                            Continuar com Apple
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Direcionamento para cadastro -->
+                <div class="link-cadastro">
+
+                    <p>
+                        Ainda não tem uma conta?
+                        <a href="cadastro.html">Cadastre-se</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Rodapé do formulário -->
+            <footer class="rodape-login">
+
+                <a href="#">Privacidade</a>
+
+                <a href="#">Termos de uso</a>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
