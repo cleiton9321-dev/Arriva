@@ -1,0 +1,10 @@
+﻿:root {
+    --cor-primaria: #641A91;
+    --cor-secundaria: #9B78F5;
+    --cor-fundo: #FCF9FD;
+    --cor-texto: #21182A;
+    --cor-branca: #FFFFFF;
+
+    --fonte-titulos: "Montserrat", sans-serif;
+    --fonte-principal: "Poppins", sans-serif;
+}

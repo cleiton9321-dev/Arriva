@@ -1,0 +1,111 @@
+﻿/* Estilos da página Login */
+
+/* Campo de senha com botão de visualização */
+.login-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.login-password input {
+    padding-right: 48px;
+}
+
+.login-password button {
+    position: absolute;
+    right: 14px;
+
+    border: none;
+    background: transparent;
+    color: #8B7A94;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.login-password svg {
+    width: 18px;
+}
+
+/* Opções abaixo da senha */
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: -3px;
+}
+
+.remember-option {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8A7E91;
+    font-size: 12px;
+}
+
+.remember-option input {
+    accent-color: #641A91;
+}
+
+/* Divisor */
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.login-divider span {
+    flex: 1;
+    height: 1px;
+    background: #E8DFEB;
+}
+
+.login-divider p {
+    color: #8A7E91;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Botões sociais */
+.social-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-buttons button {
+    flex: 1;
+    height: 46px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5D9E9;
+    border-radius: 30px;
+
+    color: #351447;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.social-buttons button:hover {
+    border-color: #641A91;
+}
+
+/* Link para cadastro */
+.login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.login-register p {
+    color: #8A7E91;
+    font-size: 12px;
+}

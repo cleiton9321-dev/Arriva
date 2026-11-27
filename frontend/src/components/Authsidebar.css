@@ -1,0 +1,84 @@
+
+/* Barra lateral */
+.auth-sidebar {
+    width: 235px;
+    min-width: 235px;
+    min-height: 100vh;
+
+    background: #290B43;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 22px;
+    color: #FFFFFF;
+}
+
+/* Logo superior */
+.auth-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.auth-logo img {
+    width: 145px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mensagem central alinhada à esquerda */
+.auth-welcome {
+    width: 100%;
+    margin: auto 0;
+    text-align: left;
+    padding: 0 5px;
+}
+
+.auth-welcome h2 {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.auth-welcome p {
+    color: #E1D1EA;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Mascote e slogan inferiores */
+.auth-bottom {
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+.auth-bottom img {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+.auth-bottom p {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 175px;
+    margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 760px) {
+
+    .auth-sidebar {
+        display: none;
+    }
+
+}
